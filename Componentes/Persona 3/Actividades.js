@@ -18,7 +18,7 @@ export function renderActividades() {
     ];
 
     return `
-        <section class="actividades-section">
+        <section class="actividades-section" id="actividades">
             <h2 class="title">Actividades Disponibles</h2>
             <div class="actividades-grid">
                 ${actividades.map(a => `

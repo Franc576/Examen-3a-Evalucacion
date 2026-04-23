@@ -17,7 +17,7 @@ export function renderHorarios() {
     ];
 
     return `
-        <section class="horarios-section">
+        <section class="horarios-section" id="horarios">
             <div class="card-header">
                 <h2>🕒 Horarios de Apertura</h2>
                 <p>Consulta nuestras franjas horarias para nadar libremente o en cursos.</p>

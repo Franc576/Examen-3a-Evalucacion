@@ -5,6 +5,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     margin: 2rem 0;
     border: 1px solid #f1f5f9;
+    scroll-margin-top: 80px;
 }
 
 .card-header {
@@ -16,10 +17,12 @@
     color: #0f172a;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    font-weight: 800;
 }
 
 .card-header p {
     color: #64748b;
+    font-size: 1rem;
 }
 
 .table-wrapper {
@@ -36,8 +39,9 @@
     padding: 1.25rem;
     background-color: #f8fafc;
     color: #475569;
-    font-weight: 600;
+    font-weight: 700;
     border-bottom: 2px solid #e2e8f0;
+    font-size: 0.95rem;
 }
 
 .horarios-table td {
@@ -48,13 +52,16 @@
 
 .font-bold {
     font-weight: 700;
+    color: #1e293b;
 }
 
 .text-red {
     color: #ef4444;
+    font-weight: 600;
     font-style: italic;
 }
 
 .horarios-table tr:hover {
     background-color: #f8fafc;
+    transition: background-color 0.3s ease;
 }

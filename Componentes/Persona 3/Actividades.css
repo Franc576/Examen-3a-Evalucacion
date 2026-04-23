@@ -2,6 +2,7 @@
     padding: 4rem 1rem;
     background-color: #f8fafc;
     border-radius: 3rem;
+    scroll-margin-top: 80px;
 }
 
 .title {
@@ -9,6 +10,7 @@
     font-size: 2.5rem;
     margin-bottom: 4rem;
     color: #1e293b;
+    font-weight: 800;
 }
 
 .actividades-grid {
@@ -27,11 +29,14 @@
     background: white;
     border-radius: 1.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
 }
 
 .actividad-item:hover {
     transform: translateX(10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
 }
 
 .icon-box {
@@ -44,15 +49,23 @@
     justify-content: center;
     border-radius: 1.25rem;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.actividad-item:hover .icon-box {
+    background: #e0e7f1;
+    transform: scale(1.1);
 }
 
 .content-box h3 {
     font-size: 1.25rem;
     color: #0f172a;
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .content-box p {
     color: #64748b;
     line-height: 1.5;
+    font-size: 0.95rem;
 }

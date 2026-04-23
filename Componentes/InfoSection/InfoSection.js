@@ -1,6 +1,6 @@
 export function renderInfoSection() {
     return `
-        <main class="info-section">
+        <main class="info-section" id="inicio">
             <div class="container">
                 <div class="grid">
                     <section class="card">
