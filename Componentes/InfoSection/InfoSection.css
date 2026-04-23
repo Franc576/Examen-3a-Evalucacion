@@ -1,6 +1,10 @@
+/* ============================================
+   INFO SECTION – Paleta Morado / Amarillo
+   ============================================ */
+
 .info-section {
     padding: 4rem 1rem;
-    background-color: #f8fafc;
+    background-color: #FAF5FF;
 }
 
 .container {
@@ -18,23 +22,30 @@
     background: white;
     padding: 2.5rem;
     border-radius: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(123, 45, 142, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #f0e6f6;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(123, 45, 142, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .card-icon {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFF8E1, #F3E5F5);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
 }
 
 .card h2 {
-    color: #1e293b;
+    color: #7B2D8E;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 700;

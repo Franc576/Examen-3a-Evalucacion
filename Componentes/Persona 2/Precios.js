@@ -17,7 +17,7 @@ export function renderPrecios() {
     ];
 
     return `
-        <section class="precios-section">
+        <section class="precios-section" id="precios">
             <h2 class="section-title">Tarifas y Bonos</h2>
             <div class="pricing-grid">
                 ${planes.map(p => `

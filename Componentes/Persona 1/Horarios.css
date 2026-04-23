@@ -1,24 +1,29 @@
+/* ============================================
+   HORARIOS – Diseño Minimalista
+   Paleta: Amarillo y Morado
+   ============================================ */
+
 .horarios-section {
-    background: white;
+    background: #ffffff;
     padding: 3rem;
     border-radius: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(123, 45, 142, 0.06);
     margin: 2rem 0;
-    border: 1px solid #f1f5f9;
+    border: 1px solid #f0e6f6;
 }
 
-.card-header {
+.horarios-section .card-header {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
-.card-header h2 {
-    color: #0f172a;
+.horarios-section .card-header h2 {
+    color: #7B2D8E;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.card-header p {
+.horarios-section .card-header p {
     color: #64748b;
 }
 
@@ -34,27 +39,47 @@
 
 .horarios-table th {
     padding: 1.25rem;
-    background-color: #f8fafc;
-    color: #475569;
+    background: linear-gradient(135deg, #7B2D8E 0%, #9B59B6 100%);
+    color: #ffffff;
     font-weight: 600;
-    border-bottom: 2px solid #e2e8f0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.horarios-table th:first-child {
+    border-radius: 0.75rem 0 0 0;
+}
+
+.horarios-table th:last-child {
+    border-radius: 0 0.75rem 0 0;
 }
 
 .horarios-table td {
     padding: 1.25rem;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f3e8f9;
     color: #334155;
+}
+
+.horarios-table tbody tr:hover {
+    background-color: #FFF8E1;
+}
+
+.horarios-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 0.75rem;
+}
+
+.horarios-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 0.75rem 0;
 }
 
 .font-bold {
     font-weight: 700;
+    color: #7B2D8E;
 }
 
 .text-red {
-    color: #ef4444;
+    color: #dc2626;
+    font-weight: 600;
     font-style: italic;
-}
-
-.horarios-table tr:hover {
-    background-color: #f8fafc;
 }

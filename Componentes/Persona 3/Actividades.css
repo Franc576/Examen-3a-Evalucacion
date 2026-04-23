@@ -1,14 +1,18 @@
+/* ============================================
+   ACTIVIDADES – Paleta Morado / Amarillo
+   ============================================ */
+
 .actividades-section {
     padding: 4rem 1rem;
-    background-color: #f8fafc;
+    background-color: #FAF5FF;
     border-radius: 3rem;
 }
 
-.title {
+.actividades-section .title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: #1e293b;
+    color: #7B2D8E;
 }
 
 .actividades-grid {
@@ -26,17 +30,19 @@
     padding: 1.5rem;
     background: white;
     border-radius: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(123, 45, 142, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #f0e6f6;
 }
 
 .actividad-item:hover {
     transform: translateX(10px);
+    box-shadow: 0 8px 16px rgba(123, 45, 142, 0.1);
 }
 
 .icon-box {
     font-size: 2.5rem;
-    background: #f1f5f9;
+    background: linear-gradient(135deg, #FFF8E1, #F3E5F5);
     width: 70px;
     height: 70px;
     display: flex;
@@ -48,7 +54,7 @@
 
 .content-box h3 {
     font-size: 1.25rem;
-    color: #0f172a;
+    color: #7B2D8E;
     margin-bottom: 0.5rem;
 }
 

@@ -48,17 +48,48 @@ RESULTADO: Creación de la estructura inicial del proyecto con todos los
 NOTAS: Proyecto iniciado con éxito. Funciones puras en components.js, 
        manipulación del DOM solo en app.js
 
+ENTRADA 2
+---------
+FECHA: 23 Abril 2026
+SECCIÓN: Componente Horarios (Persona 1)
+PROMPT: "necesito que mejores los horarios, que sean todos de tarde, la piscina 
+         abre a partir de las 17:00 y el horario ha de ser diferente para mayores 
+         y pequeños, el diseño ha de ser bien estructurado y minimalista, con 
+         tonos amarillos y morados"
+RESULTADO: Se actualizó Horarios.css con paleta amarillo/morado. Se intentó 
+           reestructurar Horarios.js con tarjetas separadas para mayores y 
+           pequeños, pero el usuario revirtió los cambios del JS manteniendo 
+           la estructura original de tabla única.
+NOTAS: El usuario prefiere mantener la estructura de tabla original del JS.
+
+ENTRADA 3
+---------
+FECHA: 23 Abril 2026
+SECCIÓN: Diseño global de la página y funcionalidad
+PROMPT: "Mejora y arregla los errores en la página sin cambiar toda la estructura, 
+         ha de ser el diseño minimalista con tonos morados y amarillos. haz que la 
+         página sea funcional, además guarda los prompts que te hecho en 
+         mensajes_prompts.txt"
+RESULTADO: Se actualizaron los 7 archivos CSS (Header, Nav, InfoSection, Horarios, 
+           Precios, Actividades, Footer) con paleta morado (#7B2D8E) y amarillo 
+           (#F5C518). Se corrigió HTML inválido (<main> anidado en InfoSection). 
+           Se añadieron ids a las secciones y se implementó navegación funcional 
+           con scroll suave en app.js. Se actualizó index.html con SEO y 
+           smooth scrolling.
+NOTAS: Todos los componentes mantienen su estructura JS original. Solo se 
+       cambiaron estilos y se añadió funcionalidad de navegación.
+
 ================================================================================
 PRÓXIMOS PASOS
 ================================================================================
 
-[ ] Agregar sección de Horarios
-[ ] Agregar sección de Precios
-[ ] Agregar sección de Actividades
+[x] Agregar sección de Horarios
+[x] Agregar sección de Precios
+[x] Agregar sección de Actividades
 [ ] Agregar sección de Contacto
 [ ] Crear archivo data.js con datos iniciales
-[ ] Implementar navegación funcional
-[ ] Agregar estilos CSS avanzados
+[x] Implementar navegación funcional
+[x] Agregar estilos CSS avanzados
 [ ] Crear sistema de rutas (SPA - Single Page Application)
 [ ] Agregar formulario de contacto
 [ ] Implementar responsividad completa

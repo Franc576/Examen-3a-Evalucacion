@@ -9,7 +9,7 @@ function injectCSS(href) {
 
 export function renderHorarios() {
     injectCSS('./Componentes/Persona 1/Horarios.css');
-    
+
     const horarios = [
         { dia: 'Lunes - Viernes', mañana: '07:00 - 14:00', tarde: '16:00 - 22:00' },
         { dia: 'Sábados', mañana: '09:00 - 14:00', tarde: '16:00 - 20:00' },
@@ -17,7 +17,7 @@ export function renderHorarios() {
     ];
 
     return `
-        <section class="horarios-section">
+        <section class="horarios-section" id="horarios">
             <div class="card-header">
                 <h2>🕒 Horarios de Apertura</h2>
                 <p>Consulta nuestras franjas horarias para nadar libremente o en cursos.</p>
