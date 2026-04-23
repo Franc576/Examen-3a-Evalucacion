@@ -48,6 +48,21 @@ RESULTADO: Creación de la estructura inicial del proyecto con todos los
 NOTAS: Proyecto iniciado con éxito. Funciones puras en components.js, 
        manipulación del DOM solo en app.js
 
+ENTRADA 2
+---------
+FECHA: 23 Abril 2026
+SECCIÓN: Componente Horarios (Persona 1)
+PROMPT: "necesito que mejores los horarios, que sean todos de tarde, la piscina 
+         abre a partir de las 17:00 y el horario ha de ser diferente para mayores 
+         y pequeños, el diseño ha de ser bien estructurado y minimalista, con 
+         tonos amarillos y morados"
+RESULTADO: Se reescribió Horarios.js con horarios solo de tarde (desde las 
+           17:00), tablas separadas para Pequeños (hasta 14 años) y Mayores 
+           (desde 15 años) con diseño de tarjetas. Se reescribió Horarios.css 
+           con diseño minimalista usando amarillo (#F5C518) para niños y 
+           morado (#7B2D8E) para adultos, grid responsive y efectos hover.
+NOTAS: Domingos cerrado. Tarjeta de niños amarilla, tarjeta de adultos morada.
+
 ================================================================================
 PRÓXIMOS PASOS
 ================================================================================
