@@ -10,31 +10,1228 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f4f8;
             color: #333;
         }
-        
+
         #app {
             width: 100%;
             min-height: 100vh;
         }
+
+        /* Header Styles */
+        .header-component {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(79, 70, 229, 0.2);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .header-content p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        /* Nav Styles */
+        .nav-component {
+            background-color: #ffffff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            color: #4b5563;
+            border: 2px solid transparent;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            color: #4f46e5;
+            background-color: #f5f3ff;
+            border-color: #e9d5ff;
+        }
+
+        .nav-btn:focus {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        .nav-btn.accent {
+            background-color: #4f46e5;
+            color: white;
+        }
+
+        .nav-btn.accent:hover {
+            background-color: #4338ca;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+        }
+
+        .nav-btn.accent:active {
+            transform: translateY(0);
+        }
+
+        /* Info Section Styles */
+        .info-section {
+            padding: 4rem 1rem;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* Horarios Styles */
+        .horarios-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 2rem 0;
+            border: 1px solid #f1f5f9;
+            scroll-margin-top: 80px;
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-header h2 {
+            color: #0f172a;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .card-header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .horarios-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .horarios-table th {
+            padding: 1.25rem;
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .horarios-table td {
+            padding: 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+        }
+
+        .font-bold {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .text-red {
+            color: #ef4444;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .horarios-table tr:hover {
+            background-color: #f8fafc;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Precios Styles */
+        .precios-section {
+            padding: 4rem 1rem;
+            scroll-margin-top: 80px;
+        }
+
+        .precios-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+        }
+
+        .price-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-color: #e2e8f0;
+        }
+
+        .price-card.popular {
+            border-color: #6366f1;
+            background: linear-gradient(to bottom, #ffffff, #f5f3ff);
+            transform: scale(1.02);
+        }
+
+        .price-card.popular:hover {
+            transform: scale(1.04) translateY(-10px);
+            box-shadow: 0 30px 50px rgba(99, 102, 241, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+        }
+
+        .price-card h3 {
+            color: #475569;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .features {
+            text-align: left;
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .features h4 {
+            color: #0f172a;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            color: #475569;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .pricing-categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f1f5f9;
+            border-radius: 1rem;
+        }
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .cat-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .cat-price {
+            font-size: 1.25rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: none;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .buy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .popular .buy-btn {
+            background-color: #6366f1;
+            color: white;
+        }
+
+        .buy-btn:hover {
+            background-color: #e2e8f0;
+        }
+
+        .popular .buy-btn:hover {
+            background-color: #4f46e5;
+            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+        }
+
+        .promo-banner {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #fcd34d;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            color: #92400e;
+            font-weight: 600;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: pulse-banner 2s infinite;
+        }
+
+        @keyframes pulse-banner {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(252, 211, 77, 0);
+            }
+        }
+
+        /* Actividades Styles */
+        .actividades-section {
+            padding: 4rem 1rem;
+            background-color: #f8fafc;
+            border-radius: 3rem;
+            scroll-margin-top: 80px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            color: #1e293b;
+            font-weight: 800;
+        }
+
+        .actividades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .actividad-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .actividad-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            background: #f1f5f9;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.25rem;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .actividad-item:hover .icon-box {
+            background: #e0e7f1;
+            transform: scale(1.1);
+        }
+
+        .content-box h3 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .content-box p {
+            color: #64748b;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        /* Contacto Styles */
+        .contacto-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e7f1 100%);
+            scroll-margin-top: 80px;
+        }
+
+        .contacto-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contacto-title {
+            font-size: 2.5rem;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .contacto-subtitle {
+            font-size: 1.125rem;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+            border-color: #cbd5e1;
+        }
+
+        .info-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p a {
+            color: #6366f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-card p a:hover {
+            color: #4f46e5;
+            text-decoration: underline;
+        }
+
+        .info-card small {
+            color: #94a3b8;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 0.75rem;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #1e293b;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            display: none;
+            font-weight: 600;
+        }
+
+        .form-message.success {
+            display: block;
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #86efac;
+        }
+
+        .form-message.error {
+            display: block;
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        /* Footer Styles */
+        .footer-component {
+            background-color: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-social {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-social span {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .footer-social span:hover {
+            opacity: 0.7;
+        }
+
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background: #10b981;
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            z-index: 9999;
+            animation: slideIn 0.3s ease-out;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .notification.error {
+            background: #ef4444;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- 
+    <!--
         CONTENEDOR PRINCIPAL DE LA APLICACIÓN
         La aplicación se renderizará completamente aquí.
-        Este es el ÚNICO lugar donde se modifica el DOM (mediante app.js)
     -->
     <div id="app"></div>
 
-    <!-- 
+    <!--
         CARGA DE SCRIPTS
-        Cargamos app.js como un módulo de JavaScript para permitir import/export.
+        Todo el código JavaScript está incluido en este archivo para evitar problemas con módulos ES6
     -->
-    <script type="module" src="app.js"></script>
+    <script>
+        // ==========================================
+        // COMPONENTES DE LA APLICACIÓN
+        // ==========================================
+
+        // Función para renderizar el Header
+        function renderHeader() {
+            return `
+                <header class="header-component">
+                    <div class="header-content">
+                        <div class="header-logo">
+                            <span class="logo-icon">🏊</span>
+                            <h1>Piscina Escolar</h1>
+                        </div>
+                        <p>Tu espacio de bienestar y deporte acuático</p>
+                    </div>
+                </header>
+            `;
+        }
+
+        // Función para renderizar la Navegación
+        function renderNav() {
+            return `
+                <nav class="nav-component">
+                    <div class="nav-links">
+                        <button class="nav-btn" data-section="inicio">Inicio</button>
+                        <button class="nav-btn" data-section="horarios">Horarios</button>
+                        <button class="nav-btn" data-section="precios">Precios</button>
+                        <button class="nav-btn" data-section="actividades">Actividades</button>
+                        <button class="nav-btn accent" data-section="contacto">Contacto</button>
+                    </div>
+                </nav>
+            `;
+        }
+
+        // Función para renderizar la Sección de Información
+        function renderInfoSection() {
+            return `
+                <main class="info-section" id="inicio">
+                    <div class="container">
+                        <div class="grid">
+                            <section class="card">
+                                <div class="card-icon">👋</div>
+                                <h2>¿Quiénes somos?</h2>
+                                <p>
+                                    Somos la piscina del colegio, un espacio dedicado a promover el deporte acuático
+                                    y el bienestar de todos nuestros estudiantes. Contamos con instalaciones modernas
+                                    y monitores especializados para garantizar la seguridad y diversión de todos.
+                                </p>
+                            </section>
+
+                            <section class="card">
+                                <div class="card-icon">✨</div>
+                                <h2>Próximamente...</h2>
+                                <p>
+                                    Explora las diferentes secciones para conocer horarios, precios, actividades y contacto.
+                                    Estamos trabajando para ofrecerte la mejor experiencia posible en nuestras renovadas instalaciones.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </main>
+            `;
+        }
+
+        // Función para renderizar Horarios
+        function renderHorarios() {
+            const horarios = [
+                { dia: 'Lunes - Viernes', mañana: '07:00 - 14:00', tarde: '16:00 - 22:00' },
+                { dia: 'Sábados', mañana: '09:00 - 14:00', tarde: '16:00 - 20:00' },
+                { dia: 'Domingos', mañana: '10:00 - 14:00', tarde: 'Cerrado' }
+            ];
+
+            return `
+                <section class="horarios-section" id="horarios">
+                    <div class="card-header">
+                        <h2>🕒 Horarios de Apertura</h2>
+                        <p>Consulta nuestras franjas horarias para nadar libremente o en cursos.</p>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="horarios-table">
+                            <thead>
+                                <tr>
+                                    <th>Día</th>
+                                    <th>Mañana</th>
+                                    <th>Tarde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${horarios.map(h => `
+                                    <tr>
+                                        <td class="font-bold">${h.dia}</td>
+                                        <td>${h.mañana}</td>
+                                        <td class="${h.tarde === 'Cerrado' ? 'text-red' : ''}">${h.tarde}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            `;
+        }
+
+        // Función para renderizar Precios
+        function renderPrecios() {
+            const planes = [
+                {
+                    nombre: 'Entrada Diaria',
+                    precio: '4.50€',
+                    desc: 'Acceso puntual a las instalaciones.',
+                    caracteristicas: ['Acceso a la piscina', 'Uso de vestuarios', 'Estacionamiento'],
+                    precioEstudiantes: '4.50€',
+                    precioAdultos: '8.00€'
+                },
+                {
+                    nombre: 'Bono 10 Sesiones',
+                    precio: '35.00€',
+                    desc: 'Ahorra un 20% en tus visitas.',
+                    caracteristicas: ['20% de descuento', 'Válido por 3 meses', 'Flexible'],
+                    precioEstudiantes: '35.00€',
+                    precioAdultos: '60.00€'
+                },
+                {
+                    nombre: 'Abono Mensual',
+                    precio: '45.00€',
+                    desc: 'Acceso ilimitado todo el mes.',
+                    popular: true,
+                    caracteristicas: ['Acceso ilimitado', 'Clases incluidas', 'Sin restricciones'],
+                    precioEstudiantes: '40.00€',
+                    precioAdultos: '60.00€'
+                },
+                {
+                    nombre: 'Abono Trimestral',
+                    precio: '100.00€',
+                    desc: 'Ahorra con nuestro mejor plan trimestral.',
+                    caracteristicas: ['3 meses de acceso', 'Mejor precio', 'Acceso prioritario a actividades'],
+                    precioEstudiantes: '100.00€',
+                    precioAdultos: '150.00€'
+                },
+                {
+                    nombre: 'Abono Anual',
+                    precio: '350.00€',
+                    desc: 'Máximo ahorro para miembros regulares.',
+                    caracteristicas: ['12 meses de acceso', 'Tarjeta VIP', 'Prioritario en todas las actividades'],
+                    precioEstudiantes: '350.00€',
+                    precioAdultos: '500.00€'
+                }
+            ];
+
+            return `
+                <section class="precios-section" id="precios">
+                    <div class="precios-header">
+                        <h2 class="section-title">Tarifas y Bonos</h2>
+                        <p class="section-subtitle">Encuentra el plan perfecto para ti</p>
+                    </div>
+                    <div class="pricing-grid">
+                        ${planes.map((p, index) => `
+                            <div class="price-card ${p.popular ? 'popular' : ''}" data-plan="${index}">
+                                ${p.popular ? '<span class="badge">Más Popular</span>' : ''}
+                                <h3>${p.nombre}</h3>
+                                <div class="price">${p.precio}</div>
+                                <p class="card-desc">${p.desc}</p>
+                                <div class="features">
+                                    <h4>Incluye:</h4>
+                                    <ul>
+                                        ${p.caracteristicas.map(f => `<li>✓ ${f}</li>`).join('')}
+                                    </ul>
+                                </div>
+                                <div class="pricing-categories">
+                                    <div class="category">
+                                        <span class="cat-label">Estudiantes</span>
+                                        <span class="cat-price">${p.precioEstudiantes}</span>
+                                    </div>
+                                    <div class="category">
+                                        <span class="cat-label">Adultos</span>
+                                        <span class="cat-price">${p.precioAdultos}</span>
+                                    </div>
+                                </div>
+                                <button class="buy-btn" data-plan-name="${p.nombre}">Seleccionar Plan</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="promo-banner">
+                        <p>💡 <strong>Promoción:</strong> Obtén 15% de descuento en planes anuales si te registras esta semana.</p>
+                    </div>
+                </section>
+            `;
+        }
+
+        // Función para renderizar Actividades
+        function renderActividades() {
+            const actividades = [
+                { nombre: 'Natación Libre', icono: '🏊', desc: 'Carriles disponibles para entrenamiento libre.' },
+                { nombre: 'Aquagym', icono: '💃', desc: 'Ejercicio rítmico en el agua para todas las edades.' },
+                { nombre: 'Escuela Infantil', icono: '👶', desc: 'Cursos de iniciación para los más pequeños.' },
+                { nombre: 'Competición', icono: '🏆', desc: 'Entrenamiento avanzado para equipos del centro.' }
+            ];
+
+            return `
+                <section class="actividades-section" id="actividades">
+                    <h2 class="title">Actividades Disponibles</h2>
+                    <div class="actividades-grid">
+                        ${actividades.map(a => `
+                            <div class="actividad-item">
+                                <div class="icon-box">${a.icono}</div>
+                                <div class="content-box">
+                                    <h3>${a.nombre}</h3>
+                                    <p>${a.desc}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        // Función para renderizar Contacto
+        function renderContacto() {
+            return `
+                <section class="contacto-section" id="contacto">
+                    <div class="contacto-container">
+                        <h2 class="contacto-title">Contacto</h2>
+                        <p class="contacto-subtitle">¿Tienes preguntas? Ponte en contacto con nosotros</p>
+
+                        <div class="contacto-grid">
+                            <div class="info-card">
+                                <div class="icon">📞</div>
+                                <h3>Teléfono</h3>
+                                <p><a href="tel:+34912345678">+34 912 345 678</a></p>
+                                <small>De lunes a viernes: 08:00 - 17:00</small>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="icon">📧</div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@piscina-escolar.edu">info@piscina-escolar.edu</a></p>
+                                <small>Respuesta en 24 horas</small>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="icon">📍</div>
+                                <h3>Ubicación</h3>
+                                <p>Calle Principal 123</p>
+                                <small>Ciudad, CP 28000</small>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="icon">🕒</div>
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes</p>
+                                <small>08:00 - 17:00 h</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <h3>Envíanos un mensaje</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Tu email" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                            </form>
+                            <div id="formMessage" class="form-message"></div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // Función para renderizar el Footer
+        function renderFooter() {
+            return `
+                <footer class="footer-component">
+                    <div class="footer-content">
+                        <p>&copy; 2026 Piscina Escolar. Todos los derechos reservados.</p>
+                        <div class="footer-social">
+                            <span>🌐</span>
+                            <span>📸</span>
+                            <span>📧</span>
+                        </div>
+                    </div>
+                </footer>
+            `;
+        }
+
+        // Función para renderizar la aplicación completa
+        function renderBienvenida() {
+            return `
+                <div class="page-container">
+                    ${renderHeader()}
+                    ${renderNav()}
+                    <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+                        ${renderInfoSection()}
+                        ${renderHorarios()}
+                        ${renderPrecios()}
+                        ${renderActividades()}
+                        ${renderContacto()}
+                    </main>
+                    ${renderFooter()}
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // LÓGICA DE LA APLICACIÓN
+        // ==========================================
+
+        /**
+         * main()
+         *
+         * Función principal de la aplicación.
+         */
+        function main() {
+            console.log('🚀 Iniciando aplicación de Piscina Escolar...');
+
+            const appContainer = document.getElementById('app');
+
+            if (!appContainer) {
+                console.error('❌ Error: No se encontró el elemento #app en el HTML');
+                return;
+            }
+
+            // Renderizar la aplicación completa
+            appContainer.innerHTML = renderBienvenida();
+
+            console.log('✅ Aplicación renderizada correctamente');
+
+            // Inicializar event listeners después de renderizar
+            initializeEventListeners();
+        }
+
+        /**
+         * initializeEventListeners()
+         *
+         * Configura todos los event listeners de la aplicación.
+         */
+        function initializeEventListeners() {
+            // Botones de navegación
+            const navButtons = document.querySelectorAll('.nav-btn[data-section]');
+            navButtons.forEach(button => {
+                button.addEventListener('click', handleNavigation);
+            });
+
+            // Botones de selección de precios
+            const buyButtons = document.querySelectorAll('.buy-btn[data-plan-name]');
+            buyButtons.forEach(button => {
+                button.addEventListener('click', handlePlanSelection);
+            });
+
+            // Formulario de contacto
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', handleContactForm);
+            }
+
+            console.log('✅ Event listeners inicializados correctamente');
+        }
+
+        /**
+         * handleNavigation(event)
+         *
+         * Maneja la navegación suave a las secciones.
+         */
+        function handleNavigation(event) {
+            const sectionId = event.target.dataset.section;
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                console.log(`📍 Navegando a: ${sectionId}`);
+            }
+        }
+
+        /**
+         * handlePlanSelection(event)
+         *
+         * Maneja la selección de un plan de precios.
+         */
+        function handlePlanSelection(event) {
+            const planName = event.target.dataset.planName;
+            event.target.textContent = '✓ ¡Plan seleccionado!';
+            event.target.disabled = true;
+            event.target.style.backgroundColor = '#10b981';
+            event.target.style.color = 'white';
+
+            console.log(`💳 Plan seleccionado: ${planName}`);
+
+            // Mostrar notificación
+            showNotification(`¡Plan "${planName}" seleccionado! Te contactaremos pronto.`, 'success');
+
+            // Restaurar botón después de 3 segundos
+            setTimeout(() => {
+                event.target.textContent = 'Seleccionar Plan';
+                event.target.disabled = false;
+                event.target.style.backgroundColor = '';
+                event.target.style.color = '';
+            }, 3000);
+        }
+
+        /**
+         * handleContactForm(event)
+         *
+         * Maneja el envío del formulario de contacto.
+         */
+        function handleContactForm(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Simular envío del formulario
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '⏳ Enviando...';
+            submitBtn.disabled = true;
+
+            // Simular delay de envío
+            setTimeout(() => {
+                showNotification('✅ ¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.', 'success');
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                console.log('📧 Formulario de contacto enviado');
+            }, 1500);
+        }
+
+        /**
+         * showNotification(message, type)
+         *
+         * Muestra una notificación temporal en pantalla.
+         */
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type === 'error' ? 'error' : ''}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                background: ${type === 'success' ? '#10b981' : '#ef4444'};
+                color: white;
+                border-radius: 0.5rem;
+                font-weight: 600;
+                z-index: 9999;
+                animation: slideIn 0.3s ease-out;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            `;
+
+            document.body.appendChild(notification);
+
+            // Remover notificación después de 3 segundos
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Ejecutar main cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', main);
+        } else {
+            main();
+        }
+    </script>
 </body>
 </html>
