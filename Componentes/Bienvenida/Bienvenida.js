@@ -4,9 +4,9 @@ import { renderInfoSection } from '../InfoSection/InfoSection.js';
 import { renderFooter } from '../Footer/Footer.js';
 
 // Nuevos componentes por persona
-import { renderHorarios } from '../Persona 1/Horarios.js';
-import { renderPrecios } from '../Persona 2/Precios.js';
-import { renderActividades } from '../Persona 3/Actividades.js';
+import { renderHorarios } from '../Persona%201/Horarios.js';
+import { renderPrecios } from '../Persona%202/Precios.js';
+import { renderActividades } from '../Persona%203/Actividades.js';
 import { renderContacto } from '../Contacto/Contacto.js';
 
 export function renderBienvenida() {
