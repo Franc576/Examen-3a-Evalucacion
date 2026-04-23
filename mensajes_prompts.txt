@@ -1,0 +1,128 @@
+================================================================================
+                    REGISTRO DE PROMPTS DEL PROYECTO
+                        Piscina Escolar - MVC
+================================================================================
+
+Fecha de creación: Abril 2026
+Proyecto: Web de Piscina Escolar siguiendo patrón MVC
+Autor: Francisco Fernández
+
+================================================================================
+DESCRIPCIÓN
+================================================================================
+
+Este archivo registra todos los prompts utilizados para generar, mejorar y 
+mantener el proyecto. Es una herramienta de referencia para:
+
+- Recordar cómo se creó cada componente
+- Mantener coherencia en futuras generaciones de código
+- Documentar decisiones de diseño
+- Facilitar la escalabilidad del proyecto
+
+================================================================================
+ESTRUCTURA DEL REGISTRO
+================================================================================
+
+Para cada entrada de prompt, incluir:
+1. FECHA: Cuándo se utilizó el prompt
+2. SECCIÓN: Qué parte del proyecto afecta
+3. PROMPT: El prompt exacto utilizado
+4. RESULTADO: Breve descripción de lo que se generó
+5. NOTAS: Observaciones o cambios posteriores
+
+================================================================================
+REGISTRO DE PROMPTS
+================================================================================
+
+[Aquí se irán agregando los prompts según se utilizan]
+
+ENTRADA 1
+---------
+FECHA: Abril 2026
+SECCIÓN: Estructura base del proyecto
+PROMPT: "Crea la estructura base de un proyecto web JavaScript siguiendo el 
+         patrón MVC para una web de piscina de colegio. Necesito: index.html,
+         components.js, app.js, Rules.md, SPEC.md"
+RESULTADO: Creación de la estructura inicial del proyecto con todos los 
+           archivos base comentados y funcionando
+NOTAS: Proyecto iniciado con éxito. Funciones puras en components.js, 
+       manipulación del DOM solo en app.js
+
+================================================================================
+PRÓXIMOS PASOS
+================================================================================
+
+[ ] Agregar sección de Horarios
+[ ] Agregar sección de Precios
+[ ] Agregar sección de Actividades
+[ ] Agregar sección de Contacto
+[ ] Crear archivo data.js con datos iniciales
+[ ] Implementar navegación funcional
+[ ] Agregar estilos CSS avanzados
+[ ] Crear sistema de rutas (SPA - Single Page Application)
+[ ] Agregar formulario de contacto
+[ ] Implementar responsividad completa
+
+================================================================================
+CONVENCIONES DEL PROYECTO
+================================================================================
+
+✅ PERMITIDO:
+   - Funciones render* que devuelven HTML String
+   - Template literals para construir HTML
+   - Event listeners en app.js
+   - querySelector, getElementById en app.js
+   - innerHTML en app.js
+
+❌ PROHIBIDO:
+   - appendChild en components.js
+   - querySelector en components.js
+   - innerHTML en components.js
+   - Event listeners en components.js
+   - Acceso directo al DOM fuera de app.js
+
+================================================================================
+COMANDOS ÚTILES
+================================================================================
+
+Para visualizar el proyecto:
+1. Abrir index.html en el navegador
+2. Abrir consola del navegador (F12)
+3. Verificar que no hay errores
+4. Probar funcionalidades
+
+Para depuración:
+- console.log() en app.js para seguir el flujo
+- Verificar componentes en consola: renderBienvenida()
+- Inspeccionar elementos en DevTools
+
+================================================================================
+REFERENCIAS DOCUMENTACIÓN
+================================================================================
+
+- Rules.md: Reglas y restricciones del proyecto
+- SPEC.md: Especificaciones y requisitos funcionales
+- index.html: Estructura HTML base
+- components.js: Componentes reutilizables (funciones puras)
+- app.js: Controlador y manipulación del DOM
+
+================================================================================
+NOTAS DE DESARROLLO
+================================================================================
+
+El patrón MVC elegido es una versión simplificada adecuada para:
+- Proyectos medianos
+- Aprendizaje de patrones de arquitectura
+- Código mantenible y escalable
+- Sin dependencias externas
+
+Ventajas de esta aproximación:
+- Código limpio y modular
+- Fácil de testear (components.js con funciones puras)
+- Separación de responsabilidades
+- Flexible para agregar más funcionalidades
+
+================================================================================
+
+Última actualización: Abril 2026
+Estado: Proyecto iniciado y estructurado correctamente

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Piscina Escolar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        
+        #app {
+            width: 100%;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CONTENEDOR PRINCIPAL DE LA APLICACIÓN
+        La aplicación se renderizará completamente aquí.
+        Este es el ÚNICO lugar donde se modifica el DOM (mediante app.js)
+    -->
+    <div id="app"></div>
+
+    <!-- 
+        CARGA DE SCRIPTS
+        Orden importante:
+        1. components.js (componentes reutilizables)
+        2. app.js (punto de entrada de la aplicación)
+    -->
+    <script src="components.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
