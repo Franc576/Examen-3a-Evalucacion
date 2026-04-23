@@ -8,7 +8,7 @@ function injectCSS(href) {
 }
 
 export function renderPrecios() {
-    injectCSS('./Componentes/Persona 2/Precios.css');
+    injectCSS('./Componentes/Persona%202/Precios.css');
 
     const planes = [
         { 

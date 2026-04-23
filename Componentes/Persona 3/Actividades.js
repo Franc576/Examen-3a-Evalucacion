@@ -8,7 +8,7 @@ function injectCSS(href) {
 }
 
 export function renderActividades() {
-    injectCSS('./Componentes/Persona 3/Actividades.css');
+    injectCSS('./Componentes/Persona%203/Actividades.css');
 
     const actividades = [
         { nombre: 'Natación Libre', icono: '🏊', desc: 'Carriles disponibles para entrenamiento libre.' },

@@ -8,7 +8,7 @@ function injectCSS(href) {
 }
 
 export function renderHorarios() {
-    injectCSS('./Componentes/Persona 1/Horarios.css');
+    injectCSS('./Componentes/Persona%201/Horarios.css');
     
     const horarios = [
         { dia: 'Lunes - Viernes', mañana: '07:00 - 14:00', tarde: '16:00 - 22:00' },
