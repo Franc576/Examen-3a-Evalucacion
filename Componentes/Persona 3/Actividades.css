@@ -1,0 +1,58 @@
+.actividades-section {
+    padding: 4rem 1rem;
+    background-color: #f8fafc;
+    border-radius: 3rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: #1e293b;
+}
+
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.actividad-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.actividad-item:hover {
+    transform: translateX(10px);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    background: #f1f5f9;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    flex-shrink: 0;
+}
+
+.content-box h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.content-box p {
+    color: #64748b;
+    line-height: 1.5;
+}

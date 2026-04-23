@@ -3,6 +3,11 @@ import { renderNav } from '../Nav/Nav.js';
 import { renderInfoSection } from '../InfoSection/InfoSection.js';
 import { renderFooter } from '../Footer/Footer.js';
 
+// Nuevos componentes por persona
+import { renderHorarios } from '../Persona 1/Horarios.js';
+import { renderPrecios } from '../Persona 2/Precios.js';
+import { renderActividades } from '../Persona 3/Actividades.js';
+
 export function renderBienvenida() {
     // Inject CSS for each component
     injectCSS('./Componentes/Header/Header.css');
@@ -14,7 +19,12 @@ export function renderBienvenida() {
         <div class="page-container">
             ${renderHeader()}
             ${renderNav()}
-            ${renderInfoSection()}
+            <main style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+                ${renderInfoSection()}
+                ${renderHorarios()}
+                ${renderPrecios()}
+                ${renderActividades()}
+            </main>
             ${renderFooter()}
         </div>
     `;
