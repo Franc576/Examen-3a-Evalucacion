@@ -20,13 +20,13 @@ export function renderPrecios() {
         <section class="precios-section" id="precios">
             <h2 class="section-title">Tarifas y Bonos</h2>
             <div class="pricing-grid">
-                ${planes.map(p => `
-                    <div class="price-card ${p.popular ? 'popular' : ''}">
+                ${planes.map((p, i) => `
+                    <div class="price-card ${p.popular ? 'popular' : ''}" id="plan-card-${i}">
                         ${p.popular ? '<span class="badge">Más Popular</span>' : ''}
                         <h3>${p.nombre}</h3>
                         <div class="price">${p.precio}</div>
                         <p>${p.desc}</p>
-                        <button class="buy-btn">Seleccionar</button>
+                        <button class="buy-btn" id="btn-plan-${i}">Seleccionar</button>
                     </div>
                 `).join('')}
             </div>

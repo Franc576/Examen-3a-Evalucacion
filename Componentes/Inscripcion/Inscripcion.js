@@ -11,11 +11,18 @@ export function renderInscripcionModal() {
                     <div class="form-group">
                         <label for="actividad-select">Actividad</label>
                         <select id="actividad-select" required>
-                            <option value="" disabled selected>Selecciona una actividad</option>
-                            <option value="natacion">Natación Libre</option>
-                            <option value="aquagym">Aquagym</option>
-                            <option value="infantil">Escuela Infantil</option>
-                            <option value="competicion">Competición</option>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <optgroup label="Actividades">
+                                <option value="natacion">Natación Libre</option>
+                                <option value="aquagym">Aquagym</option>
+                                <option value="infantil">Escuela Infantil</option>
+                                <option value="competicion">Competición</option>
+                            </optgroup>
+                            <optgroup label="Planes y Bonos">
+                                <option value="entrada">Entrada Única</option>
+                                <option value="bono">Bono 10 Sesiones</option>
+                                <option value="abono">Abono Mensual</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div class="form-group">

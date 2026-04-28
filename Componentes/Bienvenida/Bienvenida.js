@@ -7,6 +7,7 @@ import { renderFooter } from '../Footer/Footer.js';
 import { renderHorarios } from '../Persona 1 (Fran)/Horarios.js';
 import { renderPrecios } from '../Persona 2 (Álvaro)/Precios.js';
 import { renderActividades } from '../Persona 3 (Aitor)/Actividades.js';
+import { renderContacto } from '../Contacto/Contacto.js';
 
 export function renderBienvenida() {
     // Inject CSS for each component
@@ -14,6 +15,7 @@ export function renderBienvenida() {
     injectCSS('./Componentes/Nav/Nav.css');
     injectCSS('./Componentes/InfoSection/InfoSection.css');
     injectCSS('./Componentes/Footer/Footer.css');
+    injectCSS('./Componentes/Contacto/Contacto.css');
 
     return `
         <div class="page-container">
@@ -24,6 +26,7 @@ export function renderBienvenida() {
                 ${renderHorarios()}
                 ${renderPrecios()}
                 ${renderActividades()}
+                ${renderContacto()}
             </main>
             ${renderFooter()}
         </div>
