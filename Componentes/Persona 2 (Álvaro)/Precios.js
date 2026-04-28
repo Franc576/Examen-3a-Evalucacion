@@ -8,7 +8,7 @@ function injectCSS(href) {
 }
 
 export function renderPrecios() {
-    injectCSS('./Componentes/Persona 2/Precios.css');
+    injectCSS('./Componentes/Persona 2 (Álvaro)/Precios.css');
 
     const planes = [
         { nombre: 'Entrada Única', precio: '4.50€', desc: 'Acceso puntual a las instalaciones.' },
