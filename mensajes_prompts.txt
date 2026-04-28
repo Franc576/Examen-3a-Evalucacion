@@ -44,7 +44,7 @@ PROMPT: "Crea la estructura base de un proyecto web JavaScript siguiendo el
          patrón MVC para una web de piscina de colegio. Necesito: index.html,
          components.js, app.js, Rules.md, SPEC.md"
 RESULTADO: Creación de la estructura inicial del proyecto con todos los 
-           archivos base comentados y funcionando
+            archivos base comentados y funcionando
 NOTAS: Proyecto iniciado con éxito. Funciones puras en components.js, 
        manipulación del DOM solo en app.js
 
@@ -57,9 +57,9 @@ PROMPT: "necesito que mejores los horarios, que sean todos de tarde, la piscina
          y pequeños, el diseño ha de ser bien estructurado y minimalista, con 
          tonos amarillos y morados"
 RESULTADO: Se actualizó Horarios.css con paleta amarillo/morado. Se intentó 
-           reestructurar Horarios.js con tarjetas separadas para mayores y 
-           pequeños, pero el usuario revirtió los cambios del JS manteniendo 
-           la estructura original de tabla única.
+            reestructurar Horarios.js con tarjetas separadas para mayores y 
+            pequeños, pero el usuario revirtió los cambios del JS manteniendo 
+            la estructura original de tabla única.
 NOTAS: El usuario prefiere mantener la estructura de tabla original del JS.
 
 ENTRADA 3
@@ -71,11 +71,11 @@ PROMPT: "Mejora y arregla los errores en la página sin cambiar toda la estructu
          página sea funcional, además guarda los prompts que te hecho en 
          mensajes_prompts.txt"
 RESULTADO: Se actualizaron los 7 archivos CSS (Header, Nav, InfoSection, Horarios, 
-           Precios, Actividades, Footer) con paleta morado (#7B2D8E) y amarillo 
-           (#F5C518). Se corrigió HTML inválido (<main> anidado en InfoSection). 
-           Se añadieron ids a las secciones y se implementó navegación funcional 
-           con scroll suave en app.js. Se actualizó index.html con SEO y 
-           smooth scrolling.
+            Precios, Actividades, Footer) con paleta morado (#7B2D8E) y amarillo 
+            (#F5C518). Se corrigió HTML inválido (<main> anidado en InfoSection). 
+            Se añadieron ids a las secciones y se implementó navegación funcional 
+            con scroll suave en app.js. Se actualizó index.html con SEO y 
+            smooth scrolling.
 NOTAS: Todos los componentes mantienen su estructura JS original. Solo se 
        cambiaron estilos y se añadió funcionalidad de navegación.
 
@@ -117,6 +117,28 @@ RESULTADO: Integración de la librería SheetJS vía CDN en index.html. Se añad
 NOTAS: Se ha habilitado la descarga local del archivo para permitir la gestión 
         administrativa de las inscripciones sin necesidad de base de datos.
 
+ENTRADA 7
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Gestión Git
+PROMPT: "Ahora quiero subir los cambios a la rama actual, cómo lo hago?"
+RESULTADO: Explicación de los comandos git commit y git push para subir los 
+            cambios a la rama 'Apartado_Inscripcion'.
+NOTAS: Se guía al usuario en el flujo de trabajo de Git para persistir los 
+        cambios en el repositorio remoto.
+
+ENTRADA 8
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Header (Identidad Visual)
+PROMPT: "Ahora quiero que añadas el logo del club deportivo de sant josep obrer 
+         a la página en la esquina izquierda superior. El logo lo tienes en 
+         la carpeta img"
+RESULTADO: Inserción de la imagen logo.png en el componente Header.js y 
+            aplicación de estilos CSS para posicionarlo de forma absoluta 
+            en la esquina superior izquierda con efectos de sombra y hover.
+NOTAS: Se refuerza la identidad corporativa del centro en la cabecera.
+
 ================================================================================
 PRÓXIMOS PASOS
 ================================================================================
@@ -126,6 +148,7 @@ PRÓXIMOS PASOS
 [x] Agregar sección de Actividades
 [x] Implementar sistema de Inscripción (Modal)
 [x] Exportación de inscripciones a Excel (.xls)
+[x] Añadir identidad visual (Logo del club)
 [ ] Agregar sección de Contacto
 [ ] Crear archivo data.js con datos iniciales
 [x] Implementar navegación funcional
@@ -196,4 +219,4 @@ Ventajas de esta aproximación:
 ================================================================================
 
 Última actualización: 28 Abril 2026
-Estado: Proyecto actualizado con exportación a Excel (.xls)
+Estado: Proyecto actualizado con identidad visual y sistema de inscripción
