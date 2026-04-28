@@ -143,7 +143,7 @@ ENTRADA 9
 ---------
 FECHA: 28 Abril 2026
 SECCIÓN: Documentación (Release)
-PROMPT: "Ahora quioer que me generes un markdown para copiar y pegar ya que 
+PROMPT: "Ahora quiero que me generes un markdown para copiar y pegar ya que 
          quiero sacar una release de todo lo que hemos hecho. Básicamente 
          quiero que describas todo lo que hemos hecho en el markdown."
 RESULTADO: Generación de un documento Markdown estructurado resumiendo todas 
@@ -239,12 +239,12 @@ PRÓXIMOS PASOS
 [x] Implementar sistema de Inscripción (Modal)
 [x] Exportación de inscripciones a Excel (.xls)
 [x] Añadir identidad visual (Logo del club)
-[ ] Agregar sección de Contacto
+[X] Agregar sección de Contacto
 [ ] Crear archivo data.js con datos iniciales
 [x] Implementar navegación funcional
 [x] Agregar estilos CSS avanzados
 [ ] Crear sistema de rutas (SPA - Single Page Application)
-[ ] Agregar formulario de contacto
+[X] Agregar formulario de contacto
 [ ] Implementar responsividad completa
 
 ================================================================================
@@ -270,7 +270,7 @@ COMANDOS ÚTILES
 ================================================================================
 
 Para visualizar el proyecto:
-1. Abrir index.html en el navegador
+1. Abrir index.html en el navegador (Alt+L, Alt+O)
 2. Abrir consola del navegador (F12)
 3. Verificar que no hay errores
 4. Probar funcionalidades
