@@ -155,5 +155,37 @@ Ventajas de esta aproximación:
 
 ================================================================================
 
-Última actualización: Abril 2026
-Estado: Proyecto iniciado y estructurado correctamente
+ENTRADA 4
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Componente Actividades (Persona 3)
+PROMPT: "Quiero que mejores el funcionamiento y diseño del apartado de actividades,
+         hazlo más profesional y usa otras imágenes, no emijis"
+RESULTADO: Se rediseñaron Actividades.js y Actividades.css completamente.
+           Se generaron 4 imágenes fotográficas reales (natacion.png, aquagym.png,
+           infantil.png, competicion.png) guardadas en Componentes/Persona 3/img/.
+           Las tarjetas ahora usan imagen con overlay, badge flotante por categoría,
+           nivel de dificultad, descripción extendida y botón con icono SVG animado.
+           Paleta de colores única por actividad con CSS custom property --accent.
+NOTAS: Tipografía Inter desde Google Fonts. Hover con elevación cúbica suave.
+       Diseño 100% responsive con grid adaptable.
+
+ENTRADA 5
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Componente Precios (Persona 2) + Carrito de compra
+PROMPT: "Cada vez que te envie un prompt, anotalo en mensajes_prompts.txt.
+         quiero que mejores el apartado de precios a algo más profesional, y que
+         cuando vayan a pagar el usuario se mueva a hacia una cesta o basket para comprar"
+RESULTADO: Se rediseñaron Precios.js y Precios.css con tarjetas premium (features list,
+           badge popular, gradiente). Se creó Carrito.js con panel lateral slide-in
+           de carrito de compra. app.js actualizado con toda la lógica del carrito
+           (añadir, eliminar, contador flotante, panel). Bienvenida.js corregido
+           (ruta incorrecta '../Persona 2/Precios.js' → '../Persona 2 (Álvaro)/Precios.js').
+NOTAS: El carrito sigue el patrón MVC: Carrito.js solo devuelve HTML string,
+       toda la lógica del DOM y eventos está en app.js.
+
+================================================================================
+
+Última actualización: 28 Abril 2026
+Estado: Proyecto activo – Precios y Actividades rediseñados. Carrito implementado.
