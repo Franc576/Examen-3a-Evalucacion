@@ -8,13 +8,13 @@ function injectCSS(href) {
 }
 
 export function renderActividades() {
-    injectCSS('./Componentes/Persona 3/Actividades.css');
+    injectCSS('./Componentes/Persona 3 (Aitor)/Actividades.css');
 
     const actividades = [
         {
             nombre: 'Natación Libre',
             desc: 'Carriles reservados para entrenamiento autónomo. Acceso libre durante todo el horario de apertura con disponibilidad garantizada.',
-            img: './Componentes/Persona 3/img/natacion.png',
+            img: './Componentes/Persona 3 (Aitor)/img/natacion.png',
             nivel: 'Todos los niveles',
             etiqueta: 'Libre',
             color: '#0ea5e9'
@@ -22,7 +22,7 @@ export function renderActividades() {
         {
             nombre: 'Aquagym',
             desc: 'Ejercicio aeróbico de bajo impacto en el agua. Sesiones dirigidas por monitores titulados, ideales para mejorar la resistencia cardiovascular.',
-            img: './Componentes/Persona 3/img/aquagym.png',
+            img: './Componentes/Persona 3 (Aitor)/img/aquagym.png',
             nivel: 'Principiante',
             etiqueta: 'Dirigida',
             color: '#8b5cf6'
@@ -30,7 +30,7 @@ export function renderActividades() {
         {
             nombre: 'Escuela Infantil',
             desc: 'Cursos de iniciación acuática para niños de 3 a 10 años. Grupos reducidos con instructor especializado en natación infantil.',
-            img: './Componentes/Persona 3/img/infantil.png',
+            img: './Componentes/Persona 3 (Aitor)/img/infantil.png',
             nivel: 'Iniciación',
             etiqueta: 'Infantil',
             color: '#f59e0b'
@@ -38,7 +38,7 @@ export function renderActividades() {
         {
             nombre: 'Competición',
             desc: 'Entrenamiento de alto rendimiento para nadadores federados y equipos del centro. Preparación para campeonatos regionales y nacionales.',
-            img: './Componentes/Persona 3/img/competicion.png',
+            img: './Componentes/Persona 3 (Aitor)/img/competicion.png',
             nivel: 'Avanzado',
             etiqueta: 'Alto nivel',
             color: '#10b981'
