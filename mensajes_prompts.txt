@@ -79,6 +79,44 @@ RESULTADO: Se actualizaron los 7 archivos CSS (Header, Nav, InfoSection, Horario
 NOTAS: Todos los componentes mantienen su estructura JS original. Solo se 
        cambiaron estilos y se añadió funcionalidad de navegación.
 
+ENTRADA 4
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Actividades (Persona 3 - Aitor)
+PROMPT: "Añade el apartado 'Más información' de cada actividad en la carpeta 
+         Persona 3 (Aitor). Y añade este mismo prompt a mensajes_prompts.txt."
+RESULTADO: Se actualizó Actividades.js con un nuevo campo 'masInfo' para cada 
+            actividad y se modificó el template para mostrarlo. Se añadieron 
+            estilos específicos en Actividades.css para este nuevo apartado.
+NOTAS: Se mejoró la información detallada de cada actividad para proporcionar 
+        más valor al usuario final.
+
+ENTRADA 5
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Inscripción (Persona 3 - Aitor)
+PROMPT: "He visto que has añadido un texto 'Inscribirse ahora'. Haz también ese 
+         apartado. Y añade este prompt a mensajes prompts.txt (hazlo con todo 
+         lo que te diga a partir de ahora)"
+RESULTADO: Creación del componente de Inscripción (Inscripcion.js/css) con un 
+            formulario modal interactivo. Se implementó la lógica en app.js 
+            para abrir el modal, autoseleccionar la actividad y gestionar 
+            el envío simulado del formulario con mensaje de éxito.
+NOTAS: El sistema de inscripción es ahora funcional visualmente y mejora la 
+        interactividad de la sección de actividades.
+
+ENTRADA 6
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Exportación Excel (Persona 3 - Aitor)
+PROMPT: "Ahora quiero que meta cada inscripción en un archivo .xls (Excel)"
+RESULTADO: Integración de la librería SheetJS vía CDN en index.html. Se añadió 
+            la función exportToExcel en app.js que captura los datos del 
+            formulario y genera automáticamente la descarga de un archivo 
+            Excel (.xls) al confirmar la inscripción.
+NOTAS: Se ha habilitado la descarga local del archivo para permitir la gestión 
+        administrativa de las inscripciones sin necesidad de base de datos.
+
 ================================================================================
 PRÓXIMOS PASOS
 ================================================================================
@@ -86,6 +124,8 @@ PRÓXIMOS PASOS
 [x] Agregar sección de Horarios
 [x] Agregar sección de Precios
 [x] Agregar sección de Actividades
+[x] Implementar sistema de Inscripción (Modal)
+[x] Exportación de inscripciones a Excel (.xls)
 [ ] Agregar sección de Contacto
 [ ] Crear archivo data.js con datos iniciales
 [x] Implementar navegación funcional
@@ -155,5 +195,5 @@ Ventajas de esta aproximación:
 
 ================================================================================
 
-Última actualización: Abril 2026
-Estado: Proyecto iniciado y estructurado correctamente
+Última actualización: 28 Abril 2026
+Estado: Proyecto actualizado con exportación a Excel (.xls)

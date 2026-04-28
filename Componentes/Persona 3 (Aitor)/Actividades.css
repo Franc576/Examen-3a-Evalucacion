@@ -204,6 +204,32 @@
     transform: scale(0.97);
 }
 
+/* ---------- Sección Más Información ---------- */
+.actividad-info-extra {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 0.75rem;
+    border-left: 3px solid var(--accent, #7c3aed);
+}
+
+.actividad-info-title {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent, #7c3aed);
+    margin-bottom: 0.4rem;
+}
+
+.actividad-info-text {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
     .actividades-section {
