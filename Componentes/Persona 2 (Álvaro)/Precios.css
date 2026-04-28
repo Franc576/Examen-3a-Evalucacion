@@ -1,100 +1,252 @@
 /* ============================================
-   PRECIOS – Paleta Morado / Amarillo
+   PRECIOS – Diseño premium con carrito
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ---------- Sección ---------- */
 .precios-section {
-    padding: 4rem 1rem;
+    padding: 6rem 2rem;
+    background: linear-gradient(160deg, #faf5ff 0%, #f0f9ff 60%, #f8faff 100%);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-.section-title {
+/* ---------- Cabecera ---------- */
+.precios-header {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #7B2D8E;
+    max-width: 600px;
+    margin: 0 auto 4rem;
 }
 
+.precios-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.1);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.precios-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #1e1b4b;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.precios-subtitle {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ---------- Grid ---------- */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    align-items: start;
 }
 
+/* ---------- Tarjeta ---------- */
 .price-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: 2px solid #f0e6f6;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    border-radius: 1.75rem;
+    border: 1.5px solid #e8e4f3;
+    padding: 2.25rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.35s ease,
+        border-color 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
 .price-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(123, 45, 142, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(124, 58, 237, 0.12);
+    border-color: var(--accent, #7c3aed);
 }
 
+/* Tarjeta popular */
 .price-card.popular {
-    border-color: #F5C518;
-    background: linear-gradient(to bottom, #ffffff, #FFFDE7);
+    border-color: var(--accent, #7c3aed);
+    background: linear-gradient(170deg, #faf5ff 0%, #ffffff 60%);
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15);
 }
 
-.badge {
+.price-card.popular:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.22);
+}
+
+/* Ribbon popular */
+.popular-ribbon {
     position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #F5C518, #FFD54F);
-    color: #3d2600;
-    padding: 0.4rem 1.2rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
+    top: 1.1rem;
+    right: -2.2rem;
+    background: linear-gradient(135deg, var(--accent, #7c3aed), #a855f7);
+    color: #fff;
+    font-size: 0.72rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 3rem;
+    transform: rotate(35deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.price-card h3 {
-    color: #475569;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+/* ---------- Top de la tarjeta ---------- */
+.price-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
-.price {
-    font-size: 3rem;
+.plan-nombre {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent, #7c3aed);
+}
+
+.plan-precio {
+    display: flex;
+    align-items: baseline;
+    gap: 0.1rem;
+    margin-top: 0.4rem;
+    line-height: 1;
+}
+
+.precio-entero {
+    font-size: 3.5rem;
     font-weight: 800;
-    color: #7B2D8E;
-    margin-bottom: 1.5rem;
+    color: #1e1b4b;
+    letter-spacing: -0.04em;
 }
 
-.price-card p {
+.precio-decimal {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e1b4b;
+}
+
+.plan-periodo {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-top: 0.15rem;
+}
+
+.plan-desc {
+    font-size: 0.9rem;
     color: #64748b;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1eef8;
 }
 
+/* ---------- Lista de features ---------- */
+.plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    flex: 1;
+}
+
+.plan-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: #374151;
+    font-weight: 450;
+}
+
+.feature-icon {
+    color: var(--accent, #7c3aed);
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+/* ---------- Botón ---------- */
 .buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     width: 100%;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    background-color: #F3E5F5;
-    color: #7B2D8E;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    border: 2px solid var(--accent, #7c3aed);
+    background: transparent;
+    color: var(--accent, #7c3aed);
+    font-family: inherit;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s;
-}
-
-.popular .buy-btn {
-    background: linear-gradient(135deg, #F5C518, #FFD54F);
-    color: #3d2600;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+    margin-top: auto;
 }
 
 .buy-btn:hover {
-    background-color: #E1BEE7;
-    transform: translateY(-1px);
+    background: var(--accent, #7c3aed);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 
-.popular .buy-btn:hover {
-    background: linear-gradient(135deg, #e6b400, #F5C518);
+.buy-btn:active {
+    transform: scale(0.97);
+}
+
+/* Botón en la tarjeta popular: relleno por defecto */
+.price-card.popular .buy-btn {
+    background: var(--accent, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+}
+
+.price-card.popular .buy-btn:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.4);
+}
+
+/* ---------- Animación de feedback al añadir ---------- */
+.buy-btn.added {
+    background: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+    transform: scale(1.04);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    .precios-section {
+        padding: 4rem 1.25rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
