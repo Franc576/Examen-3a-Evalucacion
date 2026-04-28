@@ -12,6 +12,20 @@
     overflow: hidden;
 }
 
+.header-logo-img {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.header-logo-img:hover {
+    transform: scale(1.1);
+}
+
 .header-component::after {
     content: '';
     position: absolute;
