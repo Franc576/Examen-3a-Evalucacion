@@ -25,7 +25,44 @@ function main() {
     // Activar lógica de inscripción (Persona 3 - Aitor)
     initInscripcion();
 
+    // Activar lógica de contacto
+    initContacto();
+
     console.log('✅ Aplicación modular renderizada correctamente');
+}
+
+/**
+ * initContacto()
+ * 
+ * Maneja el envío del formulario de contacto principal.
+ */
+function initContacto() {
+    const form = document.getElementById('main-contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('.contacto-submit');
+        const successMsg = document.getElementById('contact-success');
+        
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+
+        // Simulación de envío
+        setTimeout(() => {
+            submitBtn.textContent = '¡Enviado!';
+            successMsg.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                successMsg.classList.add('hidden');
+            }, 3000);
+        }, 1500);
+    });
 }
 
 /**
@@ -40,8 +77,9 @@ function initInscripcion() {
     const successMsg = document.getElementById('form-success');
     const activitySelect = document.getElementById('actividad-select');
     const inscripcionButtons = document.querySelectorAll('.actividad-btn');
+    const planButtons = document.querySelectorAll('.buy-btn');
 
-    if (!modal || !inscripcionButtons.length) return;
+    if (!modal) return;
 
     // Abrir modal al pulsar en cualquier botón de actividad
     inscripcionButtons.forEach(btn => {
@@ -55,8 +93,26 @@ function initInscripcion() {
             else if (activityName.includes('infantil')) activitySelect.value = 'infantil';
             else if (activityName.includes('competición')) activitySelect.value = 'competicion';
 
+            modal.querySelector('h2').textContent = 'Inscripción Actividades';
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Evitar scroll al estar el modal abierto
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Abrir modal al pulsar en cualquier botón de plan de precios (Persona 2 - Álvaro)
+    planButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.price-card');
+            const planName = card.querySelector('h3').textContent.toLowerCase();
+
+            // Mapear nombre de plan al valor del select
+            if (planName.includes('entrada')) activitySelect.value = 'entrada';
+            else if (planName.includes('abono')) activitySelect.value = 'abono';
+            else if (planName.includes('bono')) activitySelect.value = 'bono';
+
+            modal.querySelector('h2').textContent = 'Contratación de Plan';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     });
 

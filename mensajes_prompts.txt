@@ -139,6 +139,96 @@ RESULTADO: Inserción de la imagen logo.png en el componente Header.js y
             en la esquina superior izquierda con efectos de sombra y hover.
 NOTAS: Se refuerza la identidad corporativa del centro en la cabecera.
 
+ENTRADA 9
+---------
+FECHA: 28 Abril 2026
+SECCIÓN: Documentación (Release)
+PROMPT: "Ahora quioer que me generes un markdown para copiar y pegar ya que 
+         quiero sacar una release de todo lo que hemos hecho. Básicamente 
+         quiero que describas todo lo que hemos hecho en el markdown."
+RESULTADO: Generación de un documento Markdown estructurado resumiendo todas 
+            las mejoras funcionales, técnicas y visuales realizadas en el 
+            proyecto para su uso en una release oficial.
+NOTAS: Se proporciona una visión global del progreso para facilitar la 
+        comunicación de los cambios realizados.
+
+ENTRADA 10
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Precios (Persona 2 - Álvaro)
+PROMPT: "Ahora quiero que realizes el apartado 'Seleccionar' del apartado de 
+         los precios (Persona 2)"
+RESULTADO: Integración de la sección de precios con el sistema de inscripción. 
+            Se añadieron los planes al formulario modal y se implementó la 
+            lógica en app.js para que los botones 'Seleccionar' de la sección 
+            de precios abran el modal con el plan correspondiente preseleccionado.
+NOTAS: Se unifica la experiencia de contratación/inscripción en todo el sitio.
+
+ENTRADA 11
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Lógica de Aplicación (Bugfix)
+PROMPT: "Vale pero ahora tienes que solucionar que, cuando pongo 'Seleccionar' 
+         en el abono mensual, se me preselecciona Bono 10 Sesiones en vez de 
+         Abono Mensual"
+RESULTADO: Corrección de la lógica de selección en app.js. Se reordenaron las 
+            condiciones de comprobación para que 'abono' se verifique antes 
+            que 'bono', evitando que la subcadena coincidente causara una 
+            preselección incorrecta.
+NOTAS: Se asegura la precisión en la preselección de planes de precios.
+
+ENTRADA 12
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Arquitectura de Componentes (Refactor)
+PROMPT: "Vale. Y ahora quiero que muevas los archivos Inscripcion.js y .css 
+         a la carpeta Componentes, ya que estos dos archivos son comunes en 
+         dos carpetas Persona."
+RESULTADO: Reorganización de archivos del proyecto. Se movió el componente 
+            Inscripción de la carpeta de Persona 3 a una carpeta compartida 
+            en Componentes/Inscripcion, actualizando todas las referencias e 
+            importaciones necesarias.
+NOTAS: Se mejora la modularidad y se evita la duplicidad de componentes.
+
+ENTRADA 13
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Contacto (Nuevo Componente)
+PROMPT: "Ahora quiero que realices el apartado Contacto de la Nav bar. para ello 
+         crea una carpeta en Componentes llamada Contacto"
+RESULTADO: Creación del componente Contacto (Contacto.js/css) con información 
+            detallada del centro, tarjetas informativas, formulario de contacto 
+            estilizado e integración de Google Maps. Se implementó la lógica 
+            de envío en app.js.
+NOTAS: Se completa la navegación principal del sitio con una sección de 
+        contacto funcional y estética.
+
+ENTRADA 14
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Contacto (UX)
+PROMPT: "Ahora quiero que, cuando el usuario seleccione 'Enviar Mensaje', se le 
+         abra un mensaje diciendo que su correo ha sido enviado y que espere a 
+         que su duda sea respondida mediante correo electrónico"
+RESULTADO: Personalización del mensaje de éxito del formulario de contacto. 
+            Se actualizó el texto en Contacto.js para cumplir con el 
+            requerimiento específico de comunicación con el usuario.
+NOTAS: Se mejora la claridad de la respuesta del sistema tras la interacción.
+
+ENTRADA 15
+----------
+FECHA: 28 Abril 2026
+SECCIÓN: Contacto (Mapa)
+PROMPT: "Veo que abajo has puesto una especie de ubicación, pero aparece esto: 
+         Google Maps Platform rejected your request. Invalid request. 
+         Invalid 'pb' parameter."
+RESULTADO: Corrección del mapa de Google Maps. Se sustituyó la URL de 
+            inserción basada en parámetros 'pb' (que estaba dando error) 
+            por una URL basada en búsqueda directa de la ubicación, mucho 
+            más robusta y compatible.
+NOTAS: El mapa ahora carga correctamente la ubicación del centro sin errores 
+        de API.
+
 ================================================================================
 PRÓXIMOS PASOS
 ================================================================================
@@ -219,4 +309,4 @@ Ventajas de esta aproximación:
 ================================================================================
 
 Última actualización: 28 Abril 2026
-Estado: Proyecto actualizado con identidad visual y sistema de inscripción
+Estado: Proyecto con navegación completa y sección de contacto

@@ -7,11 +7,11 @@ function injectCSS(href) {
     }
 }
 
-import { renderInscripcionModal } from './Inscripcion.js';
+import { renderInscripcionModal } from '../Inscripcion/Inscripcion.js';
 
 export function renderActividades() {
     injectCSS('./Componentes/Persona 3 (Aitor)/Actividades.css');
-    injectCSS('./Componentes/Persona 3 (Aitor)/Inscripcion.css');
+    injectCSS('./Componentes/Inscripcion/Inscripcion.css');
 
     const actividades = [
         {
